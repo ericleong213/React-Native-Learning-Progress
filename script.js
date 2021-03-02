@@ -3,6 +3,9 @@
 //     $("p").hide();
 //   });
 // });
+function myFunction() {
+  alert("Form is submitted");
+}
 
 console.log("firstWeb");
 

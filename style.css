@@ -1,13 +1,95 @@
-#navigation {
-  float: left;
-  width: 200px;
+#screen {
+  color: black;
+  background-color: lightgray;
+}
+#title {
+  color: royalblue;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 5px 5px 0px royalblue;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  width: auto;
 }
 
-#navigation2 {
-  float: right;
-  width: 200px;
+#nav {
+  background-color: white;
+  box-shadow: 0px 5px 5px 0px royalblue;
+  font-size: 20px;
+  padding: 2px;
+  margin: auto;
+  margin-bottom: 25px;
+  width: auto;
+}
+#nav:hover {
+  transition: all 0.5s linear 0.01s;
+  background-color: plum;
+  box-shadow: 0px 5px 5px 0px white;
+  font-size: 20px;
+  padding: 2px;
+  margin: auto;
+  margin-bottom: 25px;
+  width: auto;
+}
+
+.navItem {
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: royalblue;
+  box-shadow: 0px 0px 3px 0px royalblue;
+}
+
+li {
+  display: inline;
 }
 
 #content {
-  margin: 0 200px;
+  background-color: red;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+.contentText {
+  color: royalblue;
+  background-color: white;
+  margin: 10px;
+  margin-top: 3px;
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+}
+
+#image01 {
+  display: inline-block;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: royalblue;
+  width: 480px;
+  margin: 17px;
+  margin-bottom: 0px;
+}
+
+.textTitle {
+  padding: 5px;
+  color: royalblue;
+  background-color: white;
+  box-shadow: 0px 5px 5px 0px royalblue;
+}
+
+.textContainer {
+  display: inline-block;
+  vertical-align: top;
+}
+.imageContainer {
+}
+
+.contextBlock {
+  width: 400px;
+  color: royalblue;
+  border-style: dashed;
+  border-width: 2px;
+  padding: 5px;
 }
