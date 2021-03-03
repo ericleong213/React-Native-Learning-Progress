@@ -1,95 +1,154 @@
 #screen {
   color: black;
-  background-color: lightgray;
+  background-image: linear-gradient(to right, rgb(255, 255, 255), royalblue);
+  font-family: monospace;
 }
 #title {
   color: royalblue;
-  background-color: white;
-  padding: 10px;
-  box-shadow: 0px 5px 5px 0px royalblue;
-  text-align: center;
-  margin: auto;
-  margin-bottom: 10px;
-  width: auto;
+  font-size: 20px;
+  position: absolute;
+  top: 0px;
+  left: 20px;
 }
 
 #nav {
-  background-color: white;
-  box-shadow: 0px 5px 5px 0px royalblue;
+  position: absolute;
+  top: 0px;
+  right: 20px;
   font-size: 20px;
-  padding: 2px;
-  margin: auto;
-  margin-bottom: 25px;
-  width: auto;
-}
-#nav:hover {
-  transition: all 0.5s linear 0.01s;
-  background-color: plum;
-  box-shadow: 0px 5px 5px 0px white;
-  font-size: 20px;
-  padding: 2px;
-  margin: auto;
-  margin-bottom: 25px;
-  width: auto;
 }
 
 .navItem {
-  padding: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  border-style: solid;
-  border-width: 2px;
+  padding: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
   border-color: royalblue;
-  box-shadow: 0px 0px 3px 0px royalblue;
 }
 
 li {
   display: inline;
 }
 
-#content {
-  background-color: red;
-  padding: 10px;
-  display: inline-block;
-  vertical-align: top;
-}
-.contentText {
-  color: royalblue;
-  background-color: white;
-  margin: 10px;
-  margin-top: 3px;
-  border-width: 0px 0px 2px 0px;
-  border-style: solid;
-}
-
-#image01 {
-  display: inline-block;
-  border-style: dotted;
-  border-width: 1px;
-  border-color: royalblue;
-  width: 480px;
-  margin: 17px;
-  margin-bottom: 0px;
+.contentContainer {
+  background-color: transparent;
+  margin: auto;
+  margin-top: 100px;
+  width: 40%;
+  height: 100px;
+  padding: 20px;
 }
 
 .textTitle {
-  padding: 5px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
   color: royalblue;
   background-color: white;
   box-shadow: 0px 5px 5px 0px royalblue;
 }
-
-.textContainer {
-  display: inline-block;
-  vertical-align: top;
-}
-.imageContainer {
-}
-
 .contextBlock {
-  width: 400px;
+  margin: 20px;
+  padding: 10px;
+  margin-bottom: 50px;
+  text-align: center;
   color: royalblue;
-  border-style: dashed;
-  border-width: 2px;
-  padding: 5px;
+  background-color: white;
+  box-shadow: 0px 5px 5px 0px royalblue;
+}
+#image01 {
+  border-color: royalblue;
+  width: 100%;
+  margin: auto;
+}
+
+.hide {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0;
+}
+
+.formContainer {
+  margin-top: 100px;
+}
+
+#contactForm {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(230, 142, 233),
+    rgba(255, 255, 255, 0.384),
+    rgb(144, 240, 247)
+  );
+  margin: auto;
+  width: 30%;
+  height: 90%;
+  border: 3px solid royalblue;
+  border-radius: 30px;
+  padding: 30px;
+  font-size: 25px;
+}
+#form_title {
+  background-color: transparent;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+#l_name {
+  background-color: rgb(147, 196, 236);
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-color: royalblue;
+  border-style: solid;
+}
+#l_mail {
+  background-color: rgb(147, 196, 236);
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-color: royalblue;
+  border-style: solid;
+}
+#l_phone {
+  background-color: rgb(147, 196, 236);
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-color: royalblue;
+  border-style: solid;
+}
+
+#buttonContainer {
+  background-color: rgb(147, 196, 236);
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-color: royalblue;
+  border-style: solid;
+}
+
+#submit {
+  background-color: rgb(166, 157, 252);
+  margin: auto;
+  width: 80%;
+}
+#reset {
+  background-color: rgb(166, 157, 252);
+  margin: auto;
+  width: 80%;
 }
