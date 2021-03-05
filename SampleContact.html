@@ -1,0 +1,81 @@
+<form action="https://docs.google.com/forms/d/e/1FAIpQLScom1mRGyn4QrDN-V7A-9S5Ww8dKYiK9xojPOqt74IIYrK6xQ/formResponse"
+      target="_self"
+      id="bootstrapForm"
+      method="GET">
+    <fieldset>
+        <h2>Contact Demo<br><small></small></h2>
+    </fieldset>
+
+    <!-- Field type: "short" id: "1692396299" -->
+    <fieldset>
+        <legend for="1692396299">Name</legend>
+        <div class="form-group">
+            <input id="1475617362" type="text" name="entry.1475617362" class="form-control" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "442942292" -->
+    <fieldset>
+        <legend for="442942292">Email</legend>
+        <div class="form-group">
+            <input id="352339358" type="text" name="entry.352339358" class="form-control" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "1379341508" -->
+    <fieldset>
+        <legend for="1379341508">Phone</legend>
+        <div class="form-group">
+            <input id="1953834486" type="text" name="entry.1953834486" class="form-control" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "choices" id: "981667008" -->
+    <fieldset>
+        <legend for="981667008"></legend>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.262429620" value="Option 1" >
+                    Option 1
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="-5422485402729380712">
+    <!--
+        CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+        This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+        Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+        We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+    -->
+    <input type="hidden" name="pageHistory" value="0">
+
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+
+// This script requires jQuery and jquery-form plugin
+// You can use these ones from Cloudflare CDN:
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+//
+$('#bootstrapForm').submit(function (event) {
+    event.preventDefault()
+    var extraData = {}
+    $('#bootstrapForm').ajaxSubmit({
+        data: extraData,
+        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+        error: function () {
+            // Submit of form should be successful but JSONP callback will fail because Google Forms
+            // does not support it, so this is handled as a failure.
+            alert('Form Submitted. Thanks.')
+            // You can also redirect the user to a custom thank-you page:
+            // window.location = 'http://www.mydomain.com/thankyoupage.html'
+        }
+    })
+})

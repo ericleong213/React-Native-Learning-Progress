@@ -1,31 +1,22 @@
-// $(document).ready(function () {
-//   $("button").click(function () {
-//     $("p").hide();
-//   });
-// });
-function myFunction() {
-  alert("Form is submitted");
-}
+//prevent the page from submit
+// var form = document.getElementById("contactFormNotActive");
+// function handleForm(event) {
+//   event.preventDefault();
+// }
 
-console.log("firstWeb");
+//alert user after submit
+function submitted() {
+  alert("form submitted");
+}
 
 var handleClick = function (event) {
   console.log("handleClicked");
-  var xhr = new XMLHttpRequest();
-  xhr.open("post", "/echo/json/", true);
-
-  // xhr.onreadystatechange = function () {
-  //   console.log(this.readyState);
-  // };
-  // xhr.onload = function () {
-  //   console.log(request)
-  //   if (this.status == 200) {
-  //     console.log(this.responseText);
-  //   }
-  // };
-
-  xhr.send();
+  message.innerHTML = "HELLO, Surprised!";
 };
 
-var button = document.querySelector("#big-button");
+var button = document.getElementById("btn");
 button.addEventListener("click", handleClick);
+
+var message = document.getElementById("message");
+
+console.log("hello");
